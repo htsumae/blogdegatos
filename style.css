@@ -1,0 +1,163 @@
+/* config geral da pagina */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root{
+  font-size: 62.5%;
+  --bg-background-h-f: #065E7C;
+  --bg-neutral-white: #FFF;
+}
+body{
+  font-size: 1.6rem;
+  background: var(--bg-background-h-f);
+}
+body,
+input,
+label{
+  font-family: 'Mulish', sans-serif;
+}
+#app main,
+#app aside{
+  background: var(--bg-neutral-white);
+} 
+#app{
+  display: grid;
+  height: 100vh;
+}
+.container {
+  padding: 1.6rem 3.2rem;
+  width: min(112rem, 100%);
+  margin: 0 auto;
+}
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+
+/* configuração do header */
+
+header{
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+header form {
+  flex: 1;
+}
+header form input {
+  width: 100%;
+  padding: 1.2rem 1.5rem;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.20);
+  border: 0;
+  color: var(--bg-neutral-white);
+  font-weight: 600;
+}
+header form input::placeholder{
+  color: var(--bg-neutral-white);
+}
+
+main  #firstcat{
+  width: min(100%,76.8rem);
+}
+main h1{
+  font-size: 2.4rem;
+  line-height: 3.8rem;
+  margin-bottom: 1rem;
+}
+main .reaction{
+  display: flex;
+  gap: 1.2rem;
+  margin-bottom: 3rem;
+}
+main p {
+  margin-bottom: 1rem;
+  color: #121214;
+}
+main p + p {
+  margin-bottom: 3rem;
+}
+main .reaction img{
+  border: 1.2rem solid #065E7C;
+  border-radius: 3rem;
+  background-color: #065E7C;
+  height: 4.8rem;
+  width: 4.8rem;
+}
+
+
+aside figure{
+  display: flex;
+  gap: 1.6rem;
+  margin-bottom: 3.2rem;
+  width: min(100%,50rem);
+
+}
+
+footer{
+  text-align:center;
+  color: var(--bg-neutral-white);
+  font-weight: 600;
+
+}
+
+@media (min-width: 776px){
+  .scopo{
+    width: 780px;
+    margin: 0 auto;
+  }
+  .reaction-wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  main #firstcat{
+    margin-top: 32px;
+    padding: 1.6rem 3.2rem;
+    border-radius: 70px;
+  }
+}
+@media (min-width: 1250px){
+  #app{
+    grid-template-areas: 
+    "A A A"
+    "B B C "
+    "D D D";
+  }
+  header{
+    grid-area: A;
+  }
+  main{
+    grid-area: B;
+
+  }
+  aside{
+    grid-area: C;
+    width: 500px;
+
+  }
+  aside h2{
+    margin: 4.4rem 0 3.2rem;
+  }
+  footer{
+    grid-area: D;
+  }
+.centralize{
+  width: 100vw;
+  display: flex;
+  background:var(--bg-neutral-white);
+  place-content: center;
+}
+}
+
